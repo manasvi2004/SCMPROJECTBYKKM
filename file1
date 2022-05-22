@@ -1,0 +1,24 @@
+/******************************************************************************
+
+                              Online C++ Debugger.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Debug" button to debug it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+class XYZ
+{
+    private:
+    int num=100;
+    public:
+    friend void disp(XYZ obj);
+};
+/* if a function is defined as a friend func in c++ then the private and protected data can be accesed using that friend functon*/
+/*the function is not in the scope of the class where it is declared as friend func so it can not be called by the object of that class*/
+void disp(XYZ obj)
+{
+    cout<<obj.num;
+    
